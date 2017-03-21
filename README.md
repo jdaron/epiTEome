@@ -24,7 +24,7 @@ INSTALL
         It expects your perl installation to be at /usr/bin/perl.
 
     Tips
-        perl lib: All libraries could be install using `perl -MCPAN -e 'install Bio::SeqIO’`
+        perl lib: All libraries could be install using `perl -MCPAN -e 'install Bio::SeqIO'`
         ngsutils could be install using `pip install ngsutils`
 
     Test environment
