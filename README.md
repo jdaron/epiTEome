@@ -75,6 +75,7 @@ USAGE
       epiTEome output 4 different files such as .newInsertionSite.tab, .newInsertionSite.sam, .met.meta.tab and .met.row.tab
 
 GFF3 INPUT FILE FORMAT
+
     TE annotated features:  (i) Column 3 (type) should be referred as “te” ; (ii) Column 9 (attributes) should have
                             following list of attributes: ID=teid, sF=superfamily_name, fam=family_name.
     LTR annotated features: (i) Column 3 (type) should be referred as LTR5 or LTR3 ; Column 9 (attributes) should have
