@@ -81,6 +81,7 @@ GFF3 INPUT FILE FORMAT
                             tags Parent=teid.
 
 OUTPUT FILE FORMAT
+
     .newInsertionSite.tab
         1.  chrom - name of the chromosome or scaffold
         2.  chromStart - start position of feature containing new insertion site (0 base)
