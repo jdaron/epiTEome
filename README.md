@@ -1,10 +1,9 @@
 INSTALL
 
     Dependencies
-        All dependencies must be executable and findable in the user's PATH
+        All dependencies must be executable and findable in the user's PATH.
 
-        perl (version 5.x): Generally installed in linux and mac OS by
-        default. Expected to be installed at /usr/bin/perl
+        perl (version 5.x): Generally installed in linux and mac OS by default. Expected to be installed at /usr/bin/perl
 
         perl lib (Bio::SeqIO, Tools::GFF, DB::Sam, Set::IntervalTree, Statistics::Descriptive)
 
@@ -24,17 +23,17 @@ INSTALL
         It expects your perl installation to be at /usr/bin/perl.
 
     Tips
-        perl lib: All libraries could be install using `perl -MCPAN -e 'install Bio::SeqIO'`
-        ngsutils could be install using `pip install ngsutils`
+        All libraries can be installed using `perl -MCPAN -e 'install Bio::SeqIO'`
+        ngsutils can be installed using `pip install ngsutils`
 
     Test environment
-        This release of epiTEome (v1) tested on Mac OSX (10.11.6), perl
+        This release of epiTEome (v1) was tested on Mac OSX (10.11.6), perl
         5.18.2, samtools 1.3.1, bedtools v2.26.0, ngsutils 0.5.7, segemehl 0.2.0
 
 USAGE
 
     INDEX: Reference fasta file should be indexed in the segemehl index format.
-           3’ edge of the LTR5 and 5’ edge of the LTR3 are masked, avoiding reads competition.
+           idxEpiTEome.pl will masked the 3’ edge of the LTR5 and 5’ edge of the LTR3.
 
         Usage: idxEpiTEome.pl —l [max read length] -gff <gff3> -t <target> —ref <fasta>
 
