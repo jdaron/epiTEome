@@ -71,18 +71,19 @@ USAGE
         -chop [integer] : read end length of chopped (defaut 25,30,40).
                           Usage of several lengths will improve epiTEome sensitivity. 
         -b    [integer] : number of TEs per batch (defaut 5000).
-        -w    [integer] : window size for methylation metaplot analysis.
+        -w    [integer] : window size for methylation metaplot analysis (defaut 10 bp)
 
       Alignment Options:
         -E    [integer] : segemehl max evalue (default:5)
         -p    [integer] : number of threads used in segemehl (defaut 1).
-                          All other portions are single-threaded.
+                          All other portions of epiTEome are single-threaded.
 
     OUTPUT
       epiTEome output 4 different files .newInsertionSite.tab, .newInsertionSite.sam, .met.meta.tab and .met.row.tab
 
 GFF3 INPUT FILE FORMAT
-
+     
+    GFF3 input file follow the standard GFF3 format, except column 3 and 9 that have specific tags.
     TE annotated features (mandatory): 
         - Column 3 (type) should be referred to as 'te'
         - Column 9 (attributes) should have the following list of attributes: ID=teid, sF=superfamily_name, fam=family_name.
