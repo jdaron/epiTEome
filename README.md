@@ -30,10 +30,14 @@ INSTALL
         This release of epiTEome (v1) was tested on Mac OSX (10.11.6), perl
         5.18.2, samtools 1.3.1, bedtools v2.26.0, ngsutils 0.5.7, segemehl 0.2.0
 
+CITATION
+
+    If you use epiTEome in your work, please cite one of the following:
+    
 USAGE
 
     INDEX: Reference fasta file should be indexed in the segemehl index format.
-           Prior to indexing, idxEpiTEome.pl will mask the 3’ edge of the LTR5 
+           Prior the indexing, idxEpiTEome.pl will mask the 3’ edge of the LTR5 
 	   and 5’ edge of the LTR3 to avoid multi-mapping read competition within 
 	   a single TE. Because LTRs of a single TE are identically duplicated at
 	   the TE insertion time, this light masking will prevent split-reads that
@@ -47,10 +51,10 @@ USAGE
 
         <ref>     FASTA formated (.fa, .fna or fasta) genome file.
 
-        -l        Maximum reads length present in FASTQ file.
+        -l        Maximum read length present in FASTQ file.
 
 
-    EPITEOME: Identify new TE insertion sites and quantify their methylation level.
+    EPITEOME: Identify new TE insertion sites and quantify their methylation level from MethylC-seq datasets.
 
         Usage: epiTEome.pl [options] -gff <gff3> -t <target> —ref <fasta> -un <fastq>
 
@@ -64,7 +68,7 @@ USAGE
 
     OPTIONS
       EpiTEome Specific Options:
-        -chop [integer] : read ends length of chopped (defaut 25,30,40).
+        -chop [integer] : read end length of chopped (defaut 25,30,40).
                           Usage of several lengths will improve epiTEome sensitivity. 
         -b    [integer] : number of TEs per batch (defaut 5000).
         -w    [integer] : window size for methylation metaplot analysis.
@@ -88,7 +92,7 @@ GFF3 INPUT FILE FORMAT
 
 OUTPUT FILE FORMAT
 
-    .newInsertionSite.tab
+    .newInsertionSite.tab: coordinate of non-reference TEs
         1.  chrom - name of the chromosome or scaffold
         2.  chromStart - start position of feature containing new insertion site (0 base)
         3.  chromEnd - end position of the feature containing new insertion site
@@ -102,7 +106,9 @@ OUTPUT FILE FORMAT
         10. family - TE family name
         11. teid - teid name
 
-    .met.row.tab
+    .newInsertionSite.sam: standard sam aligment file diplaying split-reads aligment profile.
+
+    .met.row.tab: methylation level at each cytosine position (used for barplot, Figure 4A)
         1. methylation context [CG|CHG|CHH]
         2. location [neo|te] - neo (at flanking DNA at newinsertion site) or te (at TE)
         3. edge [5|3|8] - 5prime (5), 3prime (3), both (8)
@@ -111,7 +117,7 @@ OUTPUT FILE FORMAT
         6. name - feature name
         7. teid - teid name
 
-    .met.meta.tab
+    .met.meta.tab: process methylation level for metaplot analysis (used for metaplot, Figure 4B)
         1. methylation context [CG|CHG|CHH]
         2. location [neo|te] - neo (at flanking DNA at newinsertion site) or te (at TE)
         3. edge: [5|3|8] - 5prime (5), 3prime (3), both (8)
