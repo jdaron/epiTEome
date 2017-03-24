@@ -107,9 +107,9 @@ OUTPUT FILE FORMAT
         10. family - TE family name
         11. teid - teid name
 
-    .newInsertionSite.sam: standard sam aligment file diplaying split-reads aligment profile.
-    Note that all split-reads susceptible to detect a non-reference TE will be store in this file, allowing user to
-    identify false negative predictions.
+    .newInsertionSite.sam: standard sam aligment file diplaying split-reads aligment profile. Note that all 
+                           split-reads susceptible to detect a non-reference TE will be store in this file,
+			   allowing user to identify false negative predictions.
 
     .met.row.tab: methylation level at each cytosine position (used for barplot, Figure 4A)
         1. methylation context [CG|CHG|CHH]
