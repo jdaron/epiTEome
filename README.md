@@ -33,7 +33,11 @@ INSTALL
 USAGE
 
     INDEX: Reference fasta file should be indexed in the segemehl index format.
-           idxEpiTEome.pl will mask the 3’ edge of the LTR5 and 5’ edge of the LTR3.
+           Prior to indexing, idxEpiTEome.pl will mask the 3’ edge of the LTR5 
+	   and 5’ edge of the LTR3 to avoid multi-mapping read competition within 
+	   a single TE. Because LTRs of a single TE are identically duplicated at
+	   the TE insertion time, this light masking will prevent split-reads that
+	   could map at the junctions TE-flanking DNA to map inside the TE.
 
         Usage: idxEpiTEome.pl —l [max read length] -gff <gff3> -t <target> —ref <fasta>
 
