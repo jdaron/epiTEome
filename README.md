@@ -5,7 +5,7 @@ INSTALL
 
         perl (version 5.x): Generally installed in linux and mac OS by default. Expected to be installed at /usr/bin/perl
 
-        perl lib (Bio::SeqIO, Tools::GFF, DB::Sam, Set::IntervalTree, Statistics::Descriptive)
+        perl lib (File::Which, Bio::SeqIO, Tools::GFF, DB::Sam, Set::IntervalTree, Statistics::Descriptive)
 
         samtools (version 1.3.1 or higher)
 
@@ -20,7 +20,6 @@ INSTALL
     Install
         EpiTEome is a perl program that does not need to be compiled.
         Make sure it is executable. For convenience, can be added to your PATH.
-        epiTEome assumes your perl installation to be at /usr/bin/perl.
 
     Tips
         All libraries can be installed using `perl -MCPAN -e 'install Bio::SeqIO'`
@@ -132,7 +131,7 @@ TEST
     
     Test / demonstration data for epiTEome.
     - Step 1: Indexing reference file
-	   $idxEpiTEome.pl -l 85 -gff tair10TEs.gff3 -t subteid.lst -fasta Chr2.fasta 
+	   $idxEpiTEome.pl -l 85 -gff tair10TEs.gff3 -t teid.lst -fasta Chr2.fasta 
 
     - Step 2: Run epiTEome analysis
 	   $epiTEome.pl -gff tair10TEs.gff3 -ref Chr2.epiTEome.masked.fasta -un unmapped.fastq -t teid.lst 
