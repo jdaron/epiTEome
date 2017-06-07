@@ -5,7 +5,7 @@ INSTALL
 
         perl (version 5.x): Generally installed in linux and mac OS by default. Expected to be installed at /usr/bin/perl
 
-        perl lib (Bio::SeqIO, Tools::GFF, DB::Sam, Set::IntervalTree, Statistics::Descriptive)
+        perl lib (File::Which, Bio::SeqIO, Tools::GFF, DB::Sam, Set::IntervalTree, Statistics::Descriptive)
 
         samtools (version 1.3.1 or higher)
 
