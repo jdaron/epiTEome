@@ -20,7 +20,6 @@ INSTALL
     Install
         EpiTEome is a perl program that does not need to be compiled.
         Make sure it is executable. For convenience, can be added to your PATH.
-        epiTEome assumes your perl installation to be at /usr/bin/perl.
 
     Tips
         All libraries can be installed using `perl -MCPAN -e 'install Bio::SeqIO'`
