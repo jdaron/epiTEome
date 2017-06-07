@@ -132,7 +132,7 @@ TEST
     
     Test / demonstration data for epiTEome.
     - Step 1: Indexing reference file
-	   $idxEpiTEome.pl -l 85 -gff tair10TEs.gff3 -t subteid.lst -fasta Chr2.fasta 
+	   $idxEpiTEome.pl -l 85 -gff tair10TEs.gff3 -t teid.lst -fasta Chr2.fasta 
 
     - Step 2: Run epiTEome analysis
 	   $epiTEome.pl -gff tair10TEs.gff3 -ref Chr2.epiTEome.masked.fasta -un unmapped.fastq -t teid.lst 
